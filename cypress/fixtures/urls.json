@@ -5,18 +5,6 @@
       "long_url": "https://images.unsplash.com/photo-1531898418865-480b7090470f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
       "short_url": "http://localhost:3001/useshorturl/1",
       "title": "Awesome photo"
-    },
-    {
-      "long_url": "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL",
-      "title": "first",
-      "id": 2,
-      "short_url": "http://localhost:3001/useshorturl/2"
-    },
-    {
-      "long_url": "https://www.google.com/search?q=422+post+error&oq=422+post+error&aqs=chrome.0.0i512j0i390l3.4060j0j7&sourceid=chrome&ie=UTF-8",
-      "title": "second",
-      "id": 3,
-      "short_url": "http://localhost:3001/useshorturl/3"
     }
   ]
 }

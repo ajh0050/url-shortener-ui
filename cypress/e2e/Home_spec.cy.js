@@ -5,7 +5,7 @@ describe('Home spec', () => {
   })
   it('When a user visits the page, they can view the page title and the existing shortened URLs', () => {
     cy.get('h1').contains('URL Shortener')
-    cy.get('section').children().should('have.length',3)
+    cy.get('section').children().should('have.length',1)
   })
 
   it('When a user visits the page, they can view the Form with the proper inputs', ()=>{
@@ -26,7 +26,9 @@ describe('Home spec', () => {
     cy.get('.title-input').type('hello')
     cy.get('.url-input').type('https://media.tenor.com/Dhrbmr_t3tEAAAAd/forrest-gump-hello.gif')
     cy.get('button').click()
-    cy.get('section').children().should('have.length',4)
+    cy.get('section').children().should('have.length',2)
     cy.get('section').contains('hello')
+    cy.get('section').contains('https://media.tenor.com/Dhrbmr_t3tEAAAAd/forrest-gump-hello.gif')
+    cy.get('section').contains('http://localhost:3001/useshorturl/2')
   })
 })
