@@ -26,10 +26,11 @@ class UrlForm extends Component {
         throw new Error('res not ok')
       }
       return res.json()
-    }).then(()=>{
+    }).then(data=>{
+      console.log('data from the post return',data)
+      this.props.updateUrls(data)
       this.clearInputs();
-      this.props.fetchUrls()
-    })
+    }).catch((error)=> console.log(error))
 
   }
 

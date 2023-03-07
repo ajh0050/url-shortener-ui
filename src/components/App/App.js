@@ -20,13 +20,16 @@ export class App extends Component {
       this.setState({urls: data.urls})
     })
   }
+  updateUrls = (newUrl) => {
+    this.setState({urls:[...this.state.urls,newUrl]})
+  }
 
   render() {
     return (
       <main className="App">
         <header>
           <h1>URL Shortener</h1>
-          <UrlForm fetchUrls={this.fetchUrls}/>
+          <UrlForm updateUrls={this.updateUrls}/>
         </header>
         <UrlContainer urls={this.state.urls}/>
       </main>
