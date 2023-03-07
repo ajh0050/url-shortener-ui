@@ -11,8 +11,10 @@ describe('Home spec', () => {
   it('When a user visits the page, they can view the Form with the proper inputs', ()=>{
     cy.get('form').find('.title-input')
     cy.get('form').find('.url-input')
-    cy.get('form').find('.title-input')
-    cy.get('form').find('.url-input')
+    cy.get('.title-input').should('have.attr','type','text')
+    cy.get('.url-input').should('have.attr','type','text')
+    cy.get('.title-input').should('have.attr','placeholder','Title...')
+    cy.get('.url-input').should('have.attr','placeholder','URL to Shorten...')
   })
 
   it('When a user fills out the form, the information is reflected in the input fields', ()=>{
